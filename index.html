@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>Sandra Arcos-Holzinger</title>
+<meta name="description" content="Sandra Arcos-Holzinger — engineer and machine learning researcher. Speech and signal processing, robustness in ML.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+<style>
+:root{color-scheme:light dark;--ink:#14181d;--ink-soft:#545e69;--ink-faint:#8b96a2;--paper:#fbfaf7;--panel:#ffffff;--line:#e7e5df;--accent:#1f6f6b;--accent-soft:#e6f0ef;--wave:#2b8a86;--paper-glass:rgba(251,250,247,0.9);--maxw:760px}
+@media (prefers-color-scheme: dark){:root{--ink:#e8eaed;--ink-soft:#b3bac2;--ink-faint:#7d8590;--paper:#16181c;--panel:#1e2126;--line:#2b2f35;--accent:#5bc0b8;--accent-soft:#14332f;--wave:#4bb3ab;--paper-glass:rgba(22,24,28,0.9)}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:hidden;background:var(--paper)}
+body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden;max-width:100vw;-webkit-tap-highlight-color:rgba(31,111,107,0.15)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;padding-left:max(24px,env(safe-area-inset-left));padding-right:max(24px,env(safe-area-inset-right))}
+.topbanner{width:100%;height:64px;overflow:hidden;line-height:0}
+.topbanner img{width:100%;height:100%;object-fit:cover;object-position:center 45%;display:block;-webkit-mask-image:linear-gradient(180deg, #000 40%, transparent);mask-image:linear-gradient(180deg, #000 40%, transparent)}
+header.site{position:sticky;top:0;z-index:30;background:var(--paper-glass);-webkit-backdrop-filter:saturate(140%) blur(10px);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:12px;min-height:60px;padding:8px 0}
+.brand-owl{width:34px;height:34px;border-radius:50%;object-fit:cover;flex-shrink:0;display:block}
+nav.tabs{display:flex;gap:3px;margin-left:auto;flex-wrap:wrap;justify-content:flex-end}
+.tab{background:none;border:none;cursor:pointer;font:inherit;font-size:0.9rem;color:var(--ink-soft);padding:6px 10px;border-radius:6px;transition:color .15s, background .15s;white-space:nowrap}
+.tab:hover{color:var(--ink)}
+.tab.active{color:var(--accent);background:var(--accent-soft);font-weight:500}
+.tab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+main{padding:0 0 80px}
+.panel{display:none}
+.panel.active{display:block;animation:fade .3s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.hero{position:relative;padding:36px 0 26px}
+.hero-stage{position:relative;width:100%;height:200px;margin-bottom:26px;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(180deg, var(--accent-soft) 0%, var(--paper) 100%)}
+.waveform{position:absolute;inset:0;width:100%;height:100%;display:block}
+.waveform rect{opacity:0.85}
+.owl-perch{position:absolute;right:16px;bottom:14px;width:76px;height:76px;border-radius:50%;object-fit:cover;border:3px solid var(--panel);box-shadow:0 4px 14px rgba(0,0,0,0.15);z-index:4;animation:owl-bob 5s ease-in-out infinite}
+@keyframes owl-bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-5px) rotate(1deg)}}
+@media (prefers-reduced-motion: reduce){.owl-perch,.panel.active{animation:none !important}html{scroll-behavior:auto}}
+h1{font-family:"Fraunces",Georgia,serif;font-weight:600;letter-spacing:-0.02em;font-size:clamp(2rem,6vw,2.7rem);line-height:1.08}
+h2{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.5rem;letter-spacing:-0.01em;margin-bottom:4px}
+h3{font-family:"Fraunces",Georgia,serif;font-weight:500;font-size:1.1rem}
+.eyebrow{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+p{color:var(--ink-soft)}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.degrees{font-family:"Fraunces",Georgia,serif;font-weight:400;font-size:0.46em;color:var(--ink-faint);letter-spacing:0}
+.role{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:0.82rem;color:var(--ink-soft);margin:14px 0 20px;line-height:1.6}
+.lede{font-size:1.06rem;color:var(--ink);max-width:60ch}
+.home-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.chip{font-size:0.85rem;padding:7px 14px;border:1px solid var(--line);border-radius:20px;color:var(--ink-soft);background:var(--panel);transition:border-color .15s, color .15s}
+.chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.icon-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.icon-link{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid var(--line);border-radius:50%;color:var(--ink-soft);background:var(--panel);transition:border-color .15s, color .15s, transform .15s}
+.icon-link:hover{border-color:var(--accent);color:var(--accent);text-decoration:none;transform:translateY(-2px)}
+.icon-link svg{width:19px;height:19px;fill:currentColor;display:block}
+.focus{margin-top:42px;display:grid;gap:22px}
+.focus-item{padding-left:16px;border-left:2px solid var(--accent-soft)}
+.focus-item h3{margin-bottom:3px}.focus-item p{font-size:0.94rem}
+.section-head{margin:44px 0 30px}.section-head p{margin-top:6px;font-size:0.95rem}
+.news-item{display:flex;gap:18px;padding:16px 0;border-bottom:1px solid var(--line)}
+.news-item:last-child{border-bottom:none}
+.news-when{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:0.72rem;color:var(--ink-faint);flex-shrink:0;width:56px;padding-top:2px}
+.news-item p{font-size:0.94rem;color:var(--ink)}
+.pub{display:flex;gap:18px;padding:20px 0;border-bottom:1px solid var(--line)}
+.pub:last-child{border-bottom:none}
+.pub-year{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:0.72rem;color:var(--ink-faint);flex-shrink:0;width:56px;padding-top:4px}
+.pub h3{font-size:1rem;line-height:1.35;color:var(--ink);margin-bottom:5px}
+.authors{font-size:0.85rem;margin-bottom:3px}.authors .me{color:#5BC0B8;font-weight:600}
+.venue{font-size:0.82rem;color:var(--ink-faint)}
+.pub-links{margin-top:7px}.pub-links a{font-size:0.82rem;margin-right:14px;display:inline-flex;align-items:center;gap:5px}
+.arxiv-logo{height:0.95em;width:auto;vertical-align:-0.12em}
+.acronym{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:0.6rem;letter-spacing:0.06em;background:var(--accent-soft);color:var(--accent);padding:2px 7px;border-radius:4px;vertical-align:middle;margin-left:4px}
+.project{padding:28px 0;border-bottom:1px solid var(--line)}.project:last-child{border-bottom:none}
+.project-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.badge{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;background:var(--accent-soft);color:var(--accent);padding:3px 8px;border-radius:4px}
+.project p{font-size:0.94rem}
+.figure{position:relative;margin:16px auto 6px;border-radius:10px;max-width:560px;aspect-ratio:16/8;display:flex;align-items:center;justify-content:center;background:var(--panel);border:1px solid var(--line);overflow:hidden}
+.figure img{width:100%;height:100%;object-fit:contain;display:block;background:var(--panel);-webkit-mask-image:radial-gradient(115% 115% at 50% 50%, #000 72%, transparent 100%);mask-image:radial-gradient(115% 115% at 50% 50%, #000 72%, transparent 100%)}
+.figure::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:10px;box-shadow:inset 0 0 26px 8px var(--panel)}
+.figure-note{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:0.68rem;color:var(--ink-faint);text-align:center;padding:0 16px}
+.fig-cap{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:0.68rem;color:var(--ink-faint);margin-bottom:2px;text-align:center}
+.collab{font-size:0.8rem;color:var(--ink-faint);margin-top:10px}.collab strong{color:var(--ink-soft);font-weight:500}
+.collab .me{color:var(--ink);font-weight:600}
+.project-links{margin-top:10px;font-size:0.85rem}.project-links a{display:inline-flex;align-items:center;gap:6px}
+.repo-logo{height:1em;width:auto;fill:currentColor;vertical-align:-0.15em}
+.scholar-logo{height:1.05em;width:auto;vertical-align:-0.18em}
+.xp{padding:18px 0;border-bottom:1px solid var(--line)}.xp:last-child{border-bottom:none}
+.xp-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.xp-date{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:0.72rem;color:var(--ink-faint);white-space:nowrap;flex-shrink:0}
+.xp-meta{font-size:0.85rem;color:var(--ink-faint);margin-top:6px}.xp-meta strong{color:var(--ink-soft);font-weight:500}
+.xp-org{font-family:"Fraunces",Georgia,serif;font-weight:500;font-size:1.05rem;color:var(--ink)}
+.xp-roles{font-size:0.9rem;color:var(--ink-soft);margin-top:4px}
+.xp-tags{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px}
+.xp-tag{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:0.66rem;color:var(--ink-faint);border:1px solid var(--line);padding:2px 8px;border-radius:4px}
+.about-body{max-width:60ch}.about-body p{color:var(--ink);margin-bottom:16px}
+.affil{margin-top:24px;display:grid;gap:14px}
+.affil-item strong{color:var(--ink);font-weight:600;display:block;font-family:"Fraunces",Georgia,serif}
+.affil-item span{color:var(--ink-faint);font-size:0.9rem}
+.collab-list{margin-top:32px}
+.collab-list h3{margin-bottom:10px}
+.collab-list ul{list-style:none}
+.collab-list li{font-size:0.9rem;color:var(--ink-soft);padding:7px 0;border-bottom:1px solid var(--line)}
+.collab-list li:last-child{border-bottom:none}
+.flower-strip{position:relative;height:64px;margin-top:20px;overflow:hidden;line-height:0;width:100vw;margin-left:calc(50% - 50vw)}
+.flower-strip img{width:100%;height:100%;object-fit:cover;object-position:center 80%;display:block;-webkit-mask-image:linear-gradient(180deg, transparent, #000 85%);mask-image:linear-gradient(180deg, transparent, #000 85%)}
+footer{border-top:1px solid var(--line);padding:24px 0;text-align:center;font-size:0.8rem;color:var(--ink-faint);font-family:"JetBrains Mono",ui-monospace,monospace}
+@media (max-width:560px){.nav{flex-wrap:nowrap;gap:8px}nav.tabs{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;justify-content:flex-start;scrollbar-width:none;margin-left:8px;-webkit-mask-image:linear-gradient(90deg,#000 90%,transparent);mask-image:linear-gradient(90deg,#000 90%,transparent)}nav.tabs::-webkit-scrollbar{display:none}.tab{padding:6px 9px}}
+</style>
+</head>
+<body>
+<div class="topbanner" aria-hidden="true"><img src="assets/flowers.jpg" alt="" style="opacity:0.7;border-radius:5px"></div>
+<header class="site">
+  <div class="wrap nav">
+    <a href="#" onclick="show('about');return false;" aria-label="Home"><img class="brand-owl" src="assets/owl-brand.jpg" alt="" style="width:44px;height:42px"></a>
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-panel="about" onclick="show('about')">About</button>
+      <button class="tab" data-panel="experience" onclick="show('experience')">Experience</button>
+      <button class="tab" data-panel="research" onclick="show('research')">Projects</button>
+      <button class="tab" data-panel="publications" onclick="show('publications')">Publications</button>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="panel" id="research">
+    <div class="section-head"><p class="eyebrow" style="font-weight:700;font-size:17px">Projects</p></div>
+    <div class="project">
+      <div class="project-head"><h2>multi-GRIDS</h2></div>
+      <span class="badge">Upcoming</span>
+      <p>An open-source library extending GRIDS framework to multimodal.</p>
+      <p class="collab"><strong>Author:</strong> <span class="me">S. Arcos-Holzinger</span>, D. Chakraborty</p>
+      <p class="project-links"><a href="https://github.com/sarcosholzinger/multigrids" target="_blank" rel="noopener"><svg class="repo-logo" viewBox="0 0 24 24" role="img" aria-label="GitHub"><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z"/></svg>github.com/sarcosholzinger/multigrids &rarr;</a></p>
+    </div>
+    <div class="project">
+      <div class="project-head"><h2>GRIDS - anomaly detection in speech representations</h2><span class="badge">Interspeech 2026</span></div>
+      <p>Dimensionality-aware anomaly detection in learned representations of self-supervised speech models.</p>
+      <img src="assets/grids-fig1.png" alt="GRIDS Figure 1 — experimental pipeline: layerwise LID analysis of self-supervised speech models" style="width:500px;border:1px solid var(--line);border-radius:16px;position:static;overflow:hidden;display:block;margin:16px auto 6px">
+      <p class="collab"><strong>Authors:</strong> <span class="me">S. Arcos-Holzinger</span>, S. M. Erfani, J. Bailey, S. Khudanpur</p>
+      <p class="project-links"><a href="https://arxiv.org/abs/2605.02715" target="_blank" rel="noopener"><svg class="arxiv-logo" viewBox="0 0 74 24" role="img" aria-label="arXiv"><text x="0" y="18" font-family="Georgia,'Times New Roman',serif" font-size="19" font-style="italic"><tspan fill="currentColor">ar</tspan><tspan fill="#b31b1b">X</tspan><tspan fill="currentColor">iv</tspan></text></svg>arXiv:2605.02715 &rarr;</a></p>
+    </div>
+    <div class="project">
+      <h2>Alignment-aware speech retrieval</h2>
+      <p>Late-interaction retrieval for lexically faithful matching between speech and text.</p>
+      <p class="collab"><strong>Authors:</strong> D. Chakraborty, <span class="me">S. Arcos-Holzinger</span></p>
+    </div>
+    </div>
+  </div>
+  <div class="panel" id="publications">
+    <div class="section-head"><p class="eyebrow" style="font-weight:700;font-size:17px">Publications</p></div>
+    <p class="project-links" style="margin-top:-8px;margin-bottom:20px;font-size:0.85rem"><a href="https://scholar.google.com/citations?user=ay6Yii8AAAAJ&hl=en" target="_blank" rel="noopener"><svg class="scholar-logo" viewBox="0 0 24 24" role="img" aria-label="Google Scholar"><path fill="#4285f4" d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/><path fill="currentColor" d="M12 0L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>Full list on Google Scholar &rarr;</a></p>
+    <div class="pub"><div class="pub-year">2026</div><div>
+      <h3>GRIDS: Dimensionality-Aware Anomaly Detection in Learned Representations of Self-Supervised Speech Models</h3>
+      <p class="authors"><span class="me">S. Arcos-Holzinger</span>, S. M. Erfani, J. Bailey, S. Khudanpur</p>
+      <p class="venue">To appear at Interspeech 2026 &middot; arXiv:2605.02715</p>
+      <div class="pub-links"><a href="https://arxiv.org/abs/2605.02715" target="_blank" rel="noopener"><svg class="arxiv-logo" viewBox="0 0 74 24" role="img" aria-label="arXiv"><text x="0" y="18" font-family="Georgia,'Times New Roman',serif" font-size="19" font-style="italic"><tspan fill="currentColor">ar</tspan><tspan fill="#b31b1b">X</tspan><tspan fill="currentColor">iv</tspan></text></svg>arXiv:2605.02715 &rarr;</a></div></div></div>
+    <div class="pub"><div class="pub-year">2026</div><div>
+      <h3>Towards Alignment-Aware Late Interaction for Lexically Faithful Speech Retrieval</h3>
+      <p class="authors">D. Chakraborty, <span class="me">S. Arcos-Holzinger</span></p>
+      <p class="venue">ECIR 2026, Late Interaction Workshop (LIR)</p></div></div>
+    <div class="pub"><div class="pub-year">2025</div><div>
+      <h3>Relative Transfer Matrix-Based Binaural Signal Denoising of Head-Mounted Microphone Array Recordings</h3>
+      <p class="authors">M. Kumar, A. Bastine, L. Birnie, <span class="me">S. Arcos-Holzinger</span>, P. N. Samarasinghe, T. Abhayapala</p>
+      <p class="venue">EURONOISE 2025, 4299–4306</p></div></div>
+    <div class="pub"><div class="pub-year">2024</div><div>
+      <h3>Speech Denoising in Multi-Noise Source Environments Using Multiple Microphone Devices via Relative Transfer Matrix</h3>
+      <p class="authors">M. Kumar, L. Birnie, T. Abhayapala, <span class="me">S. Arcos-Holzinger</span>, A. Bastine, P. N. Samarasinghe</p>
+      <p class="venue">EUSIPCO 2024, 281–285</p></div></div>
+    <div class="collab-list">
+      <h3>Collaborators</h3>
+      <ul>
+        <li><a href="https://scholar.google.com/citations?user=Jq9ocx4AAAAJ&hl=en" target="_blank" rel="noopener">S. M. Erfani</a>, <a href="https://scholar.google.com/citations?user=ujsYC98AAAAJ&hl=en" target="_blank" rel="noopener">J. Bailey</a> — University of Melbourne &amp; Monash University</li>
+        <li><a href="https://scholar.google.com/citations?user=K-BdgNwAAAAJ&hl=en" target="_blank" rel="noopener">S. Khudanpur</a> — Johns Hopkins University, CLSP</li>
+        <li><a href="https://scholar.google.com/citations?user=NGbSyckAAAAJ&hl=en" target="_blank" rel="noopener">D. Chakraborty</a> — Johns Hopkins University, HLTCOE</li>
+        <li><a href="https://www.researchgate.net/scientific-contributions/Manish-Kumar-2221029480" target="_blank" rel="noopener">M. Kumar</a>, <a href="https://scholar.google.com/citations?user=infl2E8AAAAJ&hl=en" target="_blank" rel="noopener">L. Birnie</a>, <a href="https://scholar.google.com/citations?user=ClDkEk8AAAAJ&hl=en" target="_blank" rel="noopener">A. Bastine</a>, <a href="https://scholar.google.com/citations?user=C6sG-4QAAAAJ&hl=en" target="_blank" rel="noopener">P. N. Samarasinghe</a>, <a href="https://scholar.google.com/citations?user=rZLtenIAAAAJ&hl=en" target="_blank" rel="noopener">T. Abhayapala</a> — Australian National University</li>
+      </ul>
+    </div>
+  </div>
+  <div class="panel" id="experience">
+    <div class="section-head"><p class="eyebrow" style="font-weight:700;color:#5BC0B8;font-size:17px">Experience</p></div>
+    <div class="xp">
+      <div class="xp-head"><div class="xp-org">University of Melbourne | Johns Hopkins University</div><div class="xp-date">2025 – present</div></div>
+      <div class="xp-roles">PhD Candidate &amp; Visiting Doctoral Researcher at CLSP</div>
+      <div class="xp-meta"><strong>Supervisors:</strong> <a href="https://scholar.google.com/citations?user=ujsYC98AAAAJ&hl=en" target="_blank" rel="noopener">James Bailey</a>, <a href="https://scholar.google.com/citations?user=K-BdgNwAAAAJ&hl=en" target="_blank" rel="noopener">Sanjeev Khudanpur</a>, <a href="https://scholar.google.com/citations?user=Jq9ocx4AAAAJ&hl=en" target="_blank" rel="noopener">Sarah M. Erfani</a></div>
+      <div class="xp-tags"><span class="xp-tag">speech</span><span class="xp-tag">multimodal</span><span class="xp-tag">robustness</span><span class="xp-tag">representation learning</span><span class="xp-tag">deep learning</span></div></div>
+    <div class="xp">
+      <div class="xp-head"><div class="xp-org">Australian National University</div><div class="xp-date">2023 – present</div></div>
+      <div class="xp-roles">Honorary Lecturer &amp; Researcher · Research Collaborator &amp; Mentor</div>
+      <div class="xp-meta"><strong>Collaborators:</strong> <a href="https://scholar.google.com/citations?user=rZLtenIAAAAJ&hl=en" target="_blank" rel="noopener">Thushara Abhayapala</a>, <a href="https://scholar.google.com/citations?user=C6sG-4QAAAAJ&hl=en" target="_blank" rel="noopener">Prasanga Samarasinghe</a>, <a href="https://www.researchgate.net/scientific-contributions/Manish-Kumar-2221029480" target="_blank" rel="noopener">Manish Kumar</a>, <a href="https://scholar.google.com/citations?user=infl2E8AAAAJ&hl=en" target="_blank" rel="noopener">Lachlan Birnie</a></div>
+      <div class="xp-tags"><span class="xp-tag">signal processing</span><span class="xp-tag">audio processing</span><span class="xp-tag">microphone arrays</span><span class="xp-tag">denoising</span></div></div>
+    <div class="section-head" style="margin-top:44px"><h1 style="font-size:18px;color:#5BC0B8;font-weight:700;text-decoration:none">Previous Roles</h1></div>
+    <div class="xp">
+      <div class="xp-head"><div class="xp-org">APS Australia</div><div class="xp-date">2021 – 2025</div></div>
+      <div class="xp-roles">Technical Lead &amp; Senior Machine Learning Engineer</div>
+      <div class="xp-tags"><span class="xp-tag">ML engineering</span><span class="xp-tag">signal processing</span><span class="xp-tag">R&amp;D</span><span class="xp-tag">Defense</span></div></div>
+    <div class="xp">
+      <div class="xp-head"><div class="xp-org">Thales</div><div class="xp-date">2017 – 2021</div></div>
+      <div class="xp-roles">Sonar Studies Engineer · Systems Engineer</div>
+      <div class="xp-tags"><span class="xp-tag">sonar</span><span class="xp-tag">signal processing</span><span class="xp-tag">underwater communications</span><span class="xp-tag">systems engineering</span><span class="xp-tag">R&amp;D</span><span class="xp-tag">Defense</span></div></div>
+  </div>
+  <div class="panel active" id="about">
+    <section class="hero">
+      <div class="hero-stage" aria-hidden="true">
+        <svg class="waveform" viewBox="0 0 940 200" preserveAspectRatio="none" id="wave"></svg>
+        <img class="owl-perch" src="assets/owl.jpg" alt="">
+      </div>
+      <h1>Sandra Arcos-Holzinger <span class="degrees">BEng, MEng</span></h1>
+      <div class="icon-links">
+        <a class="icon-link" href="https://scholar.google.com/citations?user=ay6Yii8AAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg></a>
+        <a class="icon-link" href="https://github.com/sarcosholzinger" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z"/></svg></a>
+        <a class="icon-link" href="https://www.linkedin.com/in/siah/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+        <a class="icon-link" href="https://x.com/sah_ficus" target="_blank" rel="noopener" aria-label="X" title="X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+      </div>
+      <p class="role" style="font-weight:400;color:#5BC0B8">PhD Candidate, University of Melbourne (FEIT)<br>Doctoral Researcher, Johns Hopkins University (CLSP)<br>Engineer, 7+ years industry experience</p>
+      <div class="focus-item"><h3>Speech &amp; signal processing</h3><p>Denoising, microphone-array methods, and self-supervised speech representations.</p></div>
+      <div class="focus-item"><h3>Robustness in ML</h3><p>Reliability, anomaly detection, cross-modal interaction, information retrieval and ASR.</p></div>
+      <div class="focus"></div>
+    </section>
+    <div class="about-body">
+    </div>
+    <hr style="border:none;border-top:1px solid var(--line);margin:8px 0 0">
+    <div class="section-head" style="margin-top:44px"><p class="eyebrow" style="font-weight:700">Highlights</p></div>
+    <div class="news-item"><div class="news-when">Upcoming</div><p>I will be presenting our <a href="https://arxiv.org/abs/2605.02715" target="_blank" rel="noopener">GRIDS</a> work at Interspeech 2026 in Sydney, Australia.</p></div>
+    <div class="news-item"><div class="news-when">Upcoming</div><p>Building <a href="https://github.com/sarcosholzinger/multigrids" target="_blank" rel="noopener">multi-GRIDS</a>, an open-source library for multimodal interaction.</p></div>
+    <div class="news-item"><div class="news-when">Ongoing</div><p>Participating in both <a href="https://www.clsp.jhu.edu/the-12th-frederick-jelinek-memorial-summer-workshop-on-speech-and-language-technology/" target="_blank" rel="noopener">JSALT 2026</a> &amp; <a href="https://hltcoe.jhu.edu/research/scale/scale-2026/" target="_blank" rel="noopener">SCALE 2026</a> summer workshops held at Johns Hopkins University. Actively working on representation learning across multimodal (audio, vision, video) systems for robust encoding, retrieval and cross-modal interaction.</p></div>
+    <div class="news-item"><div class="news-when">June 2026</div><p><a href="https://arxiv.org/abs/2605.02715" target="_blank" rel="noopener">GRIDS</a> paper accepted to Interspeech 2026.</p></div>
+    <div class="news-item"><div class="news-when">March 2026</div><p><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ay6Yii8AAAAJ&citation_for_view=ay6Yii8AAAAJ:zYLM7Y9cAGgC" target="_blank" rel="noopener">ALI-CLAP</a> paper accepted at the Late Interaction Workshop (LIR) @ECIR 2026.</p></div>
+    <div class="news-item"><div class="news-when">March 2025</div><p>Returned to academia as a PhD candidate at the University of Melbourne, and a Doctoral Researcher at Johns Hopkins University, CLSP.</p></div>
+    <div class="flower-strip" aria-hidden="true"><img src="assets/flowers.jpg" alt="" style="opacity:0.7;border-radius:5px"></div>
+  </div>
+</main>
+<footer class="wrap">© <span id="yr"></span> Sandra Arcos-Holzinger</footer>
+<script>
+function show(id){
+  document.querySelectorAll('.panel').forEach(function(p){p.classList.toggle('active',p.id===id);});
+  document.querySelectorAll('.tab').forEach(function(t){t.classList.toggle('active',t.dataset.panel===id);});
+  window.scrollTo({top:0,behavior:'auto'});
+}
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function drawWave(){
+  var svg=document.getElementById('wave'); if(!svg)return;
+  var W=940,H=200,bars=48,gap=5,bw=(W-gap*(bars-1))/bars,html='';
+  var palette=['#2b8a86','#1f6f6b','#3fae9f','#5bc0b8','#78864f','#5c8a3a','#7fae4e','#3f7d5a','#afad70','#d1c990','#e3c766','#f0d98a','#8e5fa6','#a86fa8','#7d5aa0','#c98fce'];
+  for(var i=0;i<bars;i++){
+    var x=i*(bw+gap),dur=(3.8+Math.random()*3.2).toFixed(2),beg=(-Math.random()*5).toFixed(2);
+    var h=(Math.random()*120+10).toFixed(0),yTop=(H/2-(Math.random()*60+5)).toFixed(0);
+    var col=palette[Math.floor(Math.random()*palette.length)];
+    var sp='0.45 0 0.55 1;0.45 0 0.55 1';
+    html+='<rect fill="'+col+'" x="'+x.toFixed(2)+'" width="'+bw.toFixed(2)+'" y="'+(H/2)+'" height="1" rx="'+(bw/2).toFixed(2)+'">'+
+      '<animate attributeName="height" values="2;'+h+';2" dur="'+dur+'s" begin="'+beg+'s" calcMode="spline" keyTimes="0;0.5;1" keySplines="'+sp+'" repeatCount="indefinite"/>'+
+      '<animate attributeName="y" values="'+(H/2-1)+';'+yTop+';'+(H/2-1)+'" dur="'+dur+'s" begin="'+beg+'s" calcMode="spline" keyTimes="0;0.5;1" keySplines="'+sp+'" repeatCount="indefinite"/>'+
+    '</rect>';
+  }
+  svg.innerHTML=html;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    svg.querySelectorAll('animate').forEach(function(a){a.remove();});
+    svg.querySelectorAll('rect').forEach(function(r){
+      var h=Math.random()*100+10; r.setAttribute('height',h); r.setAttribute('y',H/2-h/2);
+    });
+  }
+})();
+</script>
+</body>
+</html>
+
+
